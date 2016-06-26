@@ -5,11 +5,14 @@ public class User {
 	private String password;
 	private String role;
 	private int id=0;
+
+
 	
-	User(String userName, String password, String role){
-		this.userName= userName;
-		this.password= password;
-		this.role= role;
+	User(String[] info){
+		
+		this.userName= info[0];
+		this.password= info[1];
+		this.role= info[2];
 		
 	}
 	public void PrintInfo(){
@@ -18,6 +21,13 @@ public class User {
 		System.out.println("Role of the user is: ");
 		System.out.println(this.getRole());
 	}
+	public void EqualUser(User user){
+		this.userName= user.userName;
+		this.password= user.password;
+		this.role= user.role;
+	
+	}
+
 
 	
 	public int getId() {

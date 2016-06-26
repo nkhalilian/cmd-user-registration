@@ -1,9 +1,9 @@
 package com.niloufar.khalilian.interfaces;
 
-import com.niloufar.khalilian.classes.User;
+import com.niloufar.khalilian.classes.CheckingAccount;
 
 public interface WriteCommand {
-	public int writeCommand(User user);
+	public int writeCommand(CheckingAccount checkingAccount);
 	
 
 }

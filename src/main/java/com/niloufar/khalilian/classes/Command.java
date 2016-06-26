@@ -1,7 +1,7 @@
 package com.niloufar.khalilian.classes;
 
 public class Command {
-	private String command;  // do I need to new it????
+	private String command;  
 	private String parameters;
 	
 	public String getCommand() {
@@ -27,15 +27,6 @@ public class Command {
 		this.parameters=cmd[1];
 		
 	}
-	
-//	public void runCommand(){
-//		Controller registerUser = new Controller();
-//		if (this.command.equals("NewUser")){
-//			registerUser.registerNewUser(this.options);
-//		}
-//		if (this.command.equals("ShowUser")){
-//			
-//		}
-//	}
+
 
 }

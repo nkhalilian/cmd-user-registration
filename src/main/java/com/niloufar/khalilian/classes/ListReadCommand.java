@@ -4,10 +4,10 @@ import com.niloufar.khalilian.interfaces.ReadCommand;
 
 public class ListReadCommand implements ReadCommand{
 
-	public User readUser(int id) {
-		for (User user : DB.db){
-			if (user.getId()==id)
-				return user;
+	public CheckingAccount readUser(int id) {
+		for ( CheckingAccount checkingAccount : DB.db){
+			if (checkingAccount.getUser().getId()==id)
+				return checkingAccount;
 		}
 			
 		// TODO Auto-generated method stub

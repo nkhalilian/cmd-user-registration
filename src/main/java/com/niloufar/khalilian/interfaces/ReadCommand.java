@@ -1,8 +1,8 @@
 package com.niloufar.khalilian.interfaces;
 
-import com.niloufar.khalilian.classes.User;
+import com.niloufar.khalilian.classes.CheckingAccount;
 
 public interface ReadCommand {
-	public User readUser(int id);
+	public CheckingAccount readUser(int id);
 
 }

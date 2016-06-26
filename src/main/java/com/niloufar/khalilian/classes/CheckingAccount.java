@@ -31,22 +31,41 @@ public class CheckingAccount implements Account{
 		this.balance = balance;
 	}
 
-	public void withdraw(int amount) {
-		if(this.balance-amount <0)
+	public void withdraw(String amount) {
+		int amt=Integer.parseInt(amount);
+		if(this.balance-amt <0)
 			System.out.println("Low Inventory!!!");
 		else
-			this.balance=this.balance-amount;
+			this.balance=this.balance-amt;
 		
 	}
 
-	public void Deposit(int amount) {
-		this.balance=this.balance+amount;
+	public void deposit(String amount) {
+		int depAmount=Integer.parseInt(amount);
+		this.balance=this.balance+depAmount;
 		
 	}
 
-	public void transfer() {
-		// TODO Auto-generated method stub
-		
+	public void transfer(Account targetAccount, String amount) {
+		this.withdraw(amount);
+		CheckingAccount targetCheckingAccount= (CheckingAccount)targetAccount;
+		targetCheckingAccount.deposit(amount);		
 	}
+	
+	public void printAccount(){
+		System.out.println("Name of the user: ");
+		System.out.println(this.getUser().getUserName());
+		System.out.println("Role of the user is: ");
+		System.out.println(this.getUser().getRole());
+		System.out.println("Amount of money deposited in account: ");
+		System.out.println(this.balance);
+	}
+
+	
+
+
+	
+
+	
 
 }
