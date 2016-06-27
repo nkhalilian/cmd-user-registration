@@ -107,10 +107,8 @@ public class Controller {
 			System.out.println("Please everify target user by say yes or no:");
 			System.out.println(checkingAccount.getUser().getUserName());
 			String verify=scanner.nextLine();
-			if(verify.toLowerCase().equals("yes")){
+			if(verify.toLowerCase().equals("yes"))
 				checkingAccount.withdraw(info[1]);
-				System.out.println("ready for deduction");
-			}
 			else
 				System.out.println("You entered id wrong!");
 			}

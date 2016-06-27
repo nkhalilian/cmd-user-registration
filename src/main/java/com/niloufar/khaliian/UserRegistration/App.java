@@ -1,5 +1,6 @@
 package com.niloufar.khaliian.UserRegistration;
 import java.awt.List;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public class App
 	
     public static void main( String[] args )
     {
+    	int str1=2;
     	while(true){
     		Scanner scanner = new Scanner(System.in);
     		String input = scanner.nextLine();
@@ -25,8 +27,6 @@ public class App
     		Command command = new Command(input);
     		Controller controller= new Controller();
     		controller.commandProcess(command);
-    	   		
-    
     	}
     	DB db= new DB()
 ;
